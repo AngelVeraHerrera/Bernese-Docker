@@ -1,0 +1,74 @@
+# ------------------------------------------------------------
+# Bernese licensed/private material
+# ------------------------------------------------------------
+
+Bernese54/
+*.iso
+*.ISO
+*.tar
+*.tar.gz
+*.tgz
+*.zip
+*.7z
+*.rar
+LICENSE_full.TXT
+LICENSE.TXT
+*LICENSE*.TXT
+*license*.txt
+
+# ------------------------------------------------------------
+# Runtime/shared/generated data
+# ------------------------------------------------------------
+
+BERN54/
+GPSDATA/
+GPSUSER54/
+GPSWORK/
+INST/
+export/
+bernese54-shared/
+data/
+work/
+tmp/
+temp/
+
+# ------------------------------------------------------------
+# Logs and build artifacts
+# ------------------------------------------------------------
+
+*.log
+*.tmp
+*.bak
+*.old
+*.orig
+*.swp
+*.swo
+*~
+
+# ------------------------------------------------------------
+# Python/cache/editor
+# ------------------------------------------------------------
+
+__pycache__/
+*.pyc
+.vscode/
+.idea/
+
+# ------------------------------------------------------------
+# OS files
+# ------------------------------------------------------------
+
+.DS_Store
+Thumbs.db
+desktop.ini
+.Identifier
+*Zone.Identifier*
+*:Zone.Identifier
+*Zone.Identifier
+
+# ------------------------------------------------------------
+# Docker local files
+# ------------------------------------------------------------
+
+.docker/
+docker-compose.override.yml

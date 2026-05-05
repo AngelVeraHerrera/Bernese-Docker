@@ -1,0 +1,44 @@
+# ============================================================
+#  Bernese Docker Ignore
+# ============================================================
+
+.git
+.gitignore
+README.md
+
+# Runtime/shared data
+BERN54/
+GPSDATA/
+GPSUSER54/
+GPSWORK/
+INST/
+bernese-src/
+data/
+user/
+work/
+
+# Ignore generic archives by default
+*.tar
+*.tar.gz
+*.tgz
+*.zip
+*.7z
+*.rar
+
+# But include the Bernese installer bundle used by this Docker build
+!Bernese54/BSW54Unx_2023-10-16.iso
+!Bernese54/LICENSE_full.TXT
+!install_bernese.sh
+!entrypoint.sh
+!install_bernese.sh
+!prepare_bernese.exp
+
+# Temporary files
+*.log
+*.tmp
+*.bak
+*.swp
+*.swo
+*.Identifier
+.DS_Store
+Thumbs.db

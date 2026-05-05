@@ -1,0 +1,55 @@
+#!/usr/bin/expect -f
+# ============================================================
+#  Bernese GNSS Software 5.4 Automated Installer
+# ============================================================
+
+set timeout -1
+
+set home_dir "/home/bernese"
+set inst_dir "$home_dir/INST"
+set bern_dir "$home_dir/BERN54"
+set perl_bin "/usr/bin/perl"
+set qt_dir "/usr/share/qt4"
+
+cd $inst_dir
+
+# ------------------------------------------------------------
+# Phase 1: setup.sh + LOADGPS.setvar generation
+# ------------------------------------------------------------
+
+spawn bash ./setup.sh
+
+expect -re {Full path to the software directory.*:}
+send "\r"
+
+expect -re {Press the return key to continue.*}
+send "\r"
+
+expect -re {Perl program to be used.*:}
+send "\r"
+
+expect -re {QT library to be used.*:}
+send "\r"
+
+expect -re {Enter option:}
+send "1\r"
+
+expect -re {Select.*\[1\]:}
+send "\r"
+
+expect -re {Accept the values.*:}
+send "n\r"
+
+expect -re {Example:}
+send "8 \${HOME}/GPSUSER54\r"
+
+expect -re {Accept the values.*:}
+send "y\r"
+
+expect -re {Press Enter to continue}
+send "\r"
+
+expect -re {Enter option:}
+send "x\r"
+
+expect eof
