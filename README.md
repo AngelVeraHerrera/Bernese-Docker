@@ -32,7 +32,7 @@ The image is based on **Ubuntu 18.04** because Bernese 5.4 depends on **Qt4**, w
 - ✅ GNU Fortran, GCC/G++, Make and Perl
 - ✅ RNXCMP tools: `CRX2RNX`, `RNX2CRX`
 - ✅ X11/WSLg support for Bernese GUI
-- ✅ Optional shared folders for `GPSWORK`, `export` and `GPSDATA`
+- ✅ Optional shared folders for `GPSWORK`, `EXPORT` and `GPSDATA`
 - ✅ Bernese installation automation through `expect` and shell scripts
 - ✅ Suitable for reproducible private/internal environments
 
