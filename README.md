@@ -14,9 +14,9 @@ Includes Ubuntu 18.04, Qt4, Fortran, Perl, RNXCMP/CRX2RNX, X11/WSLg support and 
 <br />
 <a href="http://www.bernese.unibe.ch/">Bernese GNSS Software</a>
 ·
-<a href="https://github.com/AngelVeraHerrera/Bernese54-Docker/issues">Report Bug</a>
+<a href="https://github.com/AngelVeraHerrera/Bernese-Docker/issues">Report Bug</a>
 ·
-<a href="https://github.com/AngelVeraHerrera/Bernese54-Docker/issues">Request Feature</a>
+<a href="https://github.com/AngelVeraHerrera/Bernese-Docker/issues">Request Feature</a>
 </p>
 
 ---
