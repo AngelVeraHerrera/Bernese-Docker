@@ -14,9 +14,9 @@ Includes Ubuntu 18.04, Qt4, Fortran, Perl, RNXCMP/CRX2RNX, X11/WSLg support and 
 <br />
 <a href="http://www.bernese.unibe.ch/">Bernese GNSS Software</a>
 ·
-<a href="https://github.com/AngelVeraHerrera/Bernese-Docker/issues">Report Bug</a>
+<a href="https://github.com/AngelVeraHerrera/Bernese-Docker/issues/new?labels=bug">Report Bug</a>
 ·
-<a href="https://github.com/AngelVeraHerrera/Bernese-Docker/issues">Request Feature</a>
+<a href="https://github.com/AngelVeraHerrera/Bernese-Docker/issues/new?labels=enhancement">Request Feature</a>
 </p>
 
 ---
@@ -57,7 +57,7 @@ These files are ignored by Git and must **not** be uploaded to GitHub.
 Expected local structure:
 
 ```text
-Bernese54-Docker/
+Bernese-Docker/
 ├─ Dockerfile
 ├─ entrypoint.sh
 ├─ build.sh
