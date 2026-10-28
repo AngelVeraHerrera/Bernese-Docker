@@ -59,9 +59,10 @@ Expected local structure:
 ```text
 Bernese-Docker/
 ├─ Dockerfile
-├─ entrypoint.sh
-├─ prepare_bernese.exp
-├─ install_bernese.sh
+├─ docker/               Copied into the image
+│  ├─ entrypoint.sh
+│  ├─ prepare_bernese.exp
+│  └─ install_bernese.sh
 ├─ build.sh              build.bat
 ├─ run_env_cli.sh        run_env_cli.bat
 ├─ run_env_gui.sh        run_env_gui.bat

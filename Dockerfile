@@ -257,8 +257,8 @@ RUN echo '' >> /home/${USERNAME}/.profile \
 # Expected files in Docker build context:
 #   Bernese54/BSW54Unx_2023-10-16.iso
 #   Bernese54/LICENSE_full.TXT
-#   prepare_bernese.exp
-#   install_bernese.sh
+#   docker/prepare_bernese.exp
+#   docker/install_bernese.sh
 #
 
 USER root
@@ -292,8 +292,8 @@ COPY --chown=${USERNAME}:${USERNAME} Bernese54/LICENSE_full.TXT /opt/bernese-lic
 # Bernese automated installation scripts
 # ------------------------------------------------------------
 
-COPY --chown=${USERNAME}:${USERNAME} prepare_bernese.exp /home/${USERNAME}/prepare_bernese.exp
-COPY --chown=${USERNAME}:${USERNAME} install_bernese.sh /home/${USERNAME}/install_bernese.sh
+COPY --chown=${USERNAME}:${USERNAME} docker/prepare_bernese.exp /home/${USERNAME}/prepare_bernese.exp
+COPY --chown=${USERNAME}:${USERNAME} docker/install_bernese.sh /home/${USERNAME}/install_bernese.sh
 
 RUN chmod +x /home/${USERNAME}/prepare_bernese.exp \
  && chmod +x /home/${USERNAME}/install_bernese.sh
@@ -339,7 +339,7 @@ USER ${USERNAME}
 # Entrypoint
 # ------------------------------------------------------------
 
-COPY --chown=${USERNAME}:${USERNAME} entrypoint.sh /home/${USERNAME}/entrypoint.sh
+COPY --chown=${USERNAME}:${USERNAME} docker/entrypoint.sh /home/${USERNAME}/entrypoint.sh
 RUN chmod +x /home/${USERNAME}/entrypoint.sh
 
 ENTRYPOINT ["/home/bernese/entrypoint.sh"]
