@@ -30,8 +30,12 @@ work/
 !Bernese54/LICENSE_full.TXT
 !install_bernese.sh
 !entrypoint.sh
-!install_bernese.sh
 !prepare_bernese.exp
+
+# Host-side launchers are not needed inside the image
+*.bat
+run_*.sh
+build.sh
 
 # Temporary files
 *.log

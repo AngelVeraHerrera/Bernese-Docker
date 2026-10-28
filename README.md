@@ -60,12 +60,13 @@ Expected local structure:
 Bernese-Docker/
 ├─ Dockerfile
 ├─ entrypoint.sh
-├─ build.sh
 ├─ prepare_bernese.exp
 ├─ install_bernese.sh
-├─ run_env_cli.sh
-├─ run_env_gui.sh
-├─ run_bernese_gui.sh
+├─ build.sh              build.bat
+├─ run_env_cli.sh        run_env_cli.bat
+├─ run_env_gui.sh        run_env_gui.bat
+├─ run_bernese_gui.sh    run_bernese_gui.bat
+├─ .gitattributes
 ├─ .dockerignore
 ├─ .gitignore
 ├─ README.md
@@ -113,6 +114,8 @@ Build the image from the repository root:
 ```bash
 ./build.sh
 ```
+
+On Windows: `build.bat`.
 
 Or manually:
 
@@ -322,6 +325,25 @@ ls -lh /home/bernese/GPSUSER54/PAN/MENU.INP
 
 ---
 
+## 🪟 Windows
+
+Each `.sh` script has a `.bat` equivalent with the same options:
+
+```bat
+build.bat
+run_env_cli.bat [--gpsdata]
+run_env_gui.bat [--gpsdata]
+run_bernese_gui.bat [--gpsdata]
+```
+
+Requires Docker Desktop and, for the GUI, [VcXsrv](https://sourceforge.net/projects/vcxsrv/). The GUI scripts start VcXsrv automatically. To use another X server, start it and set `DISPLAY=host.docker.internal:0.0` first.
+
+The shared folder is `%USERPROFILE%\bernese54-shared`.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+---
+
 ## ✅ Validation Checklist
 
 After building the image, run:
@@ -427,12 +449,12 @@ Load it on another computer:
 gunzip -c bernese54-runtime.tar.gz | docker load
 ```
 
-Then copy the runtime scripts:
+Then copy the runtime scripts (`.bat` versions on Windows):
 
 ```text
-run_env_cli.sh
-run_env_gui.sh
-run_bernese_gui.sh
+run_env_cli.sh      run_env_cli.bat
+run_env_gui.sh      run_env_gui.bat
+run_bernese_gui.sh  run_bernese_gui.bat
 ```
 
 and run as usual:
