@@ -28,15 +28,15 @@ This repository provides a **Dockerized runtime/build-compatible environment** f
 
 The image is based on **Ubuntu 18.04** because Bernese 5.4 depends on **Qt4**, which is no longer easily available in modern Ubuntu versions. The container includes the required compiler, Perl, Qt4 headers/libraries, X11/WSLg GUI support, and Hatanaka RINEX conversion tools.
 
-- ✅ Ubuntu 18.04 base image for native Qt4 compatibility
-- ✅ Qt 4.8.7 with Qt3Support headers
-- ✅ GNU Fortran, GCC/G++, Make and Perl
-- ✅ RNXCMP tools: `CRX2RNX`, `RNX2CRX`
-- ✅ X11/WSLg support for Bernese GUI
-- ✅ Windows `.bat` launchers with automatic VcXsrv startup
-- ✅ Optional shared folders for `GPSWORK`, `EXPORT` and `GPSDATA`
-- ✅ Bernese installation automation through `expect` and shell scripts
-- ✅ Suitable for reproducible private/internal environments
+- Ubuntu 18.04 base image for native Qt4 compatibility
+- Qt 4.8.7 with Qt3Support headers
+- GNU Fortran, GCC/G++, Make and Perl
+- RNXCMP tools: `CRX2RNX`, `RNX2CRX`
+- X11/WSLg support for Bernese GUI
+- Windows `.bat` launchers with automatic VcXsrv startup
+- Optional shared folders for `GPSWORK`, `EXPORT` and `GPSDATA`
+- Bernese installation automation through `expect` and shell scripts
+- Suitable for reproducible private/internal environments
 
 > ⚠️ **Important:** This repository does **not** include Bernese GNSS Software, ISO files, license files, campaigns, or private GNSS data. These files are proprietary/private and must be provided locally by the authorized user.
 
