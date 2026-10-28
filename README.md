@@ -65,7 +65,6 @@ Bernese-Docker/
 ├─ build.sh              build.bat
 ├─ run_env_cli.sh        run_env_cli.bat
 ├─ run_env_gui.sh        run_env_gui.bat
-├─ run_bernese_gui.sh    run_bernese_gui.bat
 ├─ .gitattributes
 ├─ .dockerignore
 ├─ .gitignore
@@ -281,6 +280,12 @@ If you close the GUI, reopen it from the shell:
 G &
 ```
 
+If the GUI appears empty or reports missing menu files, check that `GPSUSER54` is not mounted from the host:
+
+```bash
+ls -lh /home/bernese/GPSUSER54/PAN/MENU.INP
+```
+
 Useful GUI diagnostics:
 
 ```bash
@@ -301,30 +306,6 @@ to avoid common MIT-SHM issues when running Qt/X11 applications through Docker a
 
 ---
 
-## 🚀 Run Bernese GUI Directly
-
-Launch the Bernese GUI directly:
-
-```bash
-./run_bernese_gui.sh
-```
-
-Launch directly with external `GPSDATA` mounted:
-
-```bash
-./run_bernese_gui.sh --gpsdata
-```
-
-If the GUI starts but appears empty or reports missing menu files, check that `GPSUSER54` is not being mounted from the host. The internal file must exist:
-
-```bash
-ls -lh /home/bernese/GPSUSER54/PAN/MENU.INP
-```
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
----
-
 ## 🪟 Windows
 
 Each `.sh` script has a `.bat` equivalent with the same options:
@@ -333,10 +314,9 @@ Each `.sh` script has a `.bat` equivalent with the same options:
 build.bat
 run_env_cli.bat [--gpsdata]
 run_env_gui.bat [--gpsdata]
-run_bernese_gui.bat [--gpsdata]
 ```
 
-Requires Docker Desktop and, for the GUI, [VcXsrv](https://sourceforge.net/projects/vcxsrv/). The GUI scripts start VcXsrv automatically. To use another X server, start it and set `DISPLAY=host.docker.internal:0.0` first.
+Requires Docker Desktop and, for the GUI, [VcXsrv](https://sourceforge.net/projects/vcxsrv/). The GUI script starts VcXsrv automatically. To use another X server, start it and set `DISPLAY=host.docker.internal:0.0` first.
 
 The shared folder is `%USERPROFILE%\bernese54-shared`.
 
@@ -454,14 +434,13 @@ Then copy the runtime scripts (`.bat` versions on Windows):
 ```text
 run_env_cli.sh      run_env_cli.bat
 run_env_gui.sh      run_env_gui.bat
-run_bernese_gui.sh  run_bernese_gui.bat
 ```
 
 and run as usual:
 
 ```bash
 ./run_env_cli.sh
-./run_bernese_gui.sh
+./run_env_gui.sh
 ```
 
 > ⚠️ The generated Docker image may contain Bernese software and license data. Keep it private and distribute it only according to your Bernese license terms.

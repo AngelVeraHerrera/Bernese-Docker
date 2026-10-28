@@ -11,8 +11,6 @@ Bernese54/
 *.zip
 *.7z
 *.rar
-LICENSE_full.TXT
-LICENSE.TXT
 *LICENSE*.TXT
 *license*.txt
 
@@ -63,8 +61,6 @@ Thumbs.db
 desktop.ini
 .Identifier
 *Zone.Identifier*
-*:Zone.Identifier
-*Zone.Identifier
 
 # ------------------------------------------------------------
 # Docker local files

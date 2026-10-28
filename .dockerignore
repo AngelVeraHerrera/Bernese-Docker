@@ -1,48 +1,14 @@
 # ============================================================
 #  Bernese Docker Ignore
 # ============================================================
+#
+#  Allowlist: only what the Dockerfile COPYs enters the build
+#  context, so private data in this folder never leaks into it.
+#
 
-.git
-.gitignore
-README.md
-
-# Runtime/shared data
-BERN54/
-GPSDATA/
-GPSUSER54/
-GPSWORK/
-INST/
-bernese-src/
-data/
-user/
-work/
-
-# Ignore generic archives by default
-*.tar
-*.tar.gz
-*.tgz
-*.zip
-*.7z
-*.rar
-
-# But include the Bernese installer bundle used by this Docker build
+*
 !Bernese54/BSW54Unx_2023-10-16.iso
 !Bernese54/LICENSE_full.TXT
-!install_bernese.sh
 !entrypoint.sh
 !prepare_bernese.exp
-
-# Host-side launchers are not needed inside the image
-*.bat
-run_*.sh
-build.sh
-
-# Temporary files
-*.log
-*.tmp
-*.bak
-*.swp
-*.swo
-*.Identifier
-.DS_Store
-Thumbs.db
+!install_bernese.sh
