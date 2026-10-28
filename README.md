@@ -263,7 +263,7 @@ qmake -v
 
 ## 🖥️ Run GUI Environment
 
-Run a shell with GUI/X11/WSLg support:
+Open the Bernese GUI in background and keep a shell open in the container:
 
 ```bash
 ./run_env_gui.sh
@@ -275,7 +275,7 @@ Run GUI environment with external `GPSDATA` mounted from the host:
 ./run_env_gui.sh --gpsdata
 ```
 
-Inside the container, launch Bernese manually:
+If you close the GUI, reopen it from the shell:
 
 ```bash
 G &

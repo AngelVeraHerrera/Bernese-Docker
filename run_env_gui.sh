@@ -58,4 +58,4 @@ fi
 
 docker run "${DOCKER_ARGS[@]}" \
     "${IMAGE_NAME}" \
-    bash
+    bash -c 'G & echo "Bernese GUI started. Type G to open it again."; exec bash'

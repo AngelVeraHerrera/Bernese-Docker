@@ -105,7 +105,8 @@ REM  Start container
 REM ------------------------------------------------------------
 
 :run
-docker run %DOCKER_ARGS% %IMAGE_NAME% bash
+REM Bernese GUI runs in background; the shell stays open.
+docker run %DOCKER_ARGS% %IMAGE_NAME% bash -c "G & echo Bernese GUI started. Type G to open it again.; exec bash"
 
 if errorlevel 125 (
     echo.
