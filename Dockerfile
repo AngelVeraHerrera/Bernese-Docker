@@ -255,7 +255,7 @@ RUN echo '' >> /home/${USERNAME}/.profile \
 # ------------------------------------------------------------
 #
 # Expected files in Docker build context:
-#   Bernese54/BSW54Unx_2023-10-16.tar.gz
+#   Bernese54/BSW54Unx_2023-10-16.iso
 #   Bernese54/LICENSE_full.TXT
 #   prepare_bernese.exp
 #   install_bernese.sh
