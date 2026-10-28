@@ -3,13 +3,14 @@
 <!-- PROJECT SHIELDS -->
 [![Docker][docker-shield]][docker-url]
 [![MIT License][license-shield]][license-url]
+[![Release][release-shield]][release-url]
 
 <!-- PROJECT LOGO -->
 <h1 align="center">Bernese-Docker</h1>
 
 <p align="center">
 Dockerized environment for Bernese GNSS Software reproducible execution. <br />
-Includes Ubuntu 18.04, Qt4, Fortran, Perl, RNXCMP/CRX2RNX, X11/WSLg support and optional shared data folders.
+Includes Ubuntu 18.04, Qt4, Fortran, Perl, RNXCMP/CRX2RNX, X11/WSLg support, Windows launchers and optional shared data folders.
 <br />
 <br />
 <a href="http://www.bernese.unibe.ch/">Bernese GNSS Software</a>
@@ -32,6 +33,7 @@ The image is based on **Ubuntu 18.04** because Bernese 5.4 depends on **Qt4**, w
 - ✅ GNU Fortran, GCC/G++, Make and Perl
 - ✅ RNXCMP tools: `CRX2RNX`, `RNX2CRX`
 - ✅ X11/WSLg support for Bernese GUI
+- ✅ Windows `.bat` launchers with automatic VcXsrv startup
 - ✅ Optional shared folders for `GPSWORK`, `EXPORT` and `GPSDATA`
 - ✅ Bernese installation automation through `expect` and shell scripts
 - ✅ Suitable for reproducible private/internal environments
@@ -512,3 +514,5 @@ This license applies only to the Dockerfiles, scripts and documentation in this 
 [docker-url]: https://www.docker.com/
 [license-shield]: https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge
 [license-url]: https://opensource.org/licenses/MIT
+[release-shield]: https://img.shields.io/github/v/release/AngelVeraHerrera/Bernese-Docker?style=for-the-badge
+[release-url]: https://github.com/AngelVeraHerrera/Bernese-Docker/releases
